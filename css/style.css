@@ -1,0 +1,19 @@
+main {
+    display: grid;
+}
+
+#sectionOne {
+    background: brown;
+}
+
+#characterSelection {
+    background: blue;
+}
+
+#sectionTwo {
+    background: pink;
+}
+
+.cube {
+    box-sizing: border-box;
+}
