@@ -8,29 +8,130 @@ main {
     margin: auto;
 }
 
-.section{
+.sectionBox{
     display:grid;
+    height: auto;
     grid-template: 3fr 1fr 1fr / 1fr;
 }
 
 #sectionOne {
-    background-color: brown;
-}
-
-#playerOne {
-    color: orange;
-    width: 3em;
-    height: 3em;
-}
-
-#characterSelection {
-    background-color: blue;
+    background-color: brown;    
 }
 
 #sectionTwo {
     background-color: pink;
 }
 
+.playerBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#playerOne {
+    background-color: orange;
+    width: 10rem;
+    height: 10rem;
+    border: 1rem solid black;
+}
+
+#playerTwo {
+    background-color: greenyellow;
+    width: 10rem;
+    height: 10rem;
+    border: 1rem solid black;
+}
+
+.healthBarBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.healthBar {
+    width: 70%;
+    height: 70%; 
+    border: 0.45rem solid black;
+    border-radius: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#healthBarOne {
+    background-color: green;
+}
+
+#healthBarTwo {
+    background-color: green;
+}
+
+span {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+button {
+    width: 75%;
+    height: 75%; 
+    border: 0.5rem solid black;
+    border-radius: 15%;
+    cursor: pointer;
+}
+
+button span{
+    font-size: 3.5rem;
+    font-weight: bolder;
+}
+
+.actionButtonBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#actionButtonOne{
+    background-color:cadetblue;
+}
+
+#actionButttonTwo{
+    background-color:goldenrod;
+}
+
+.characterSelectionBox {
+    background-color: blue;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+.characterContentBox{
+    display: grid;
+    height: fit-content;
+    width: fit-content;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 1em;
+    align-self: center;
+    justify-self: center;
+}
+
 .cube {
-    box-sizing: border-box;
+    width: 12rem;
+    height: 12rem;
+    border: 1.2rem solid black;
+}
+
+#pinkCube{
+    background-color: pink;
+}
+
+#blueCube{
+    background-color: blue;
+}
+
+#redCube{
+    background-color: red;   
+}
+
+#yellowCube{
+    background-color: yellow;
 }
