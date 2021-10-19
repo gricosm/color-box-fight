@@ -1,14 +1,11 @@
-main {
+.background {
     height: 95vh;
-    max-height: 1440px;
     width: auto;
-    display: grid;
-    grid-template: 1fr / 1fr 1.5fr 1fr;
-    gap: 3px;
-    margin: auto;
+    background-image: url(../media/img/background.jpg);
+    background-position: center;
 }
 
-.sectionBox{
+/* .sectionBox{
     display:grid;
     height: auto;
     grid-template: 3fr 1fr 1fr / 1fr;
@@ -134,4 +131,4 @@ button span{
 
 #yellowCube{
     background-color: yellow;
-}
+} */
