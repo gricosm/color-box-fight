@@ -2,3 +2,19 @@
     height: 95vh;
     width: auto;
 }
+
+#playerChooser {
+    display:block;
+}
+
+#playerChooser1 {
+    display : block;
+}
+
+#playerChooser2 {
+    display : none;
+}
+
+#playerFight{
+    display: inline-block;
+}

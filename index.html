@@ -9,17 +9,24 @@
 <body>
     <main class="background">
         <section id="playerChooser">
-            <button class="character" onclick="chooseFighter('yellowFighter')"><img src="media/img/yellowhero-on.jpg" alt="Héroe Amarillo"></button>
-            <button class="character" onclick="chooseFighter('blueFighter')"><img src="media/img/bluehero-on.jpg" alt="Héroe Azul"></button>
-            <button class="character" onclick="chooseFighter('redFighter')"><img src="media/img/redhero-on.jpg" alt="Héroe Rojo"></button>
-            <button class="character" onclick="chooseFighter('pinkFighter')"><img src="media/img/pinkhero-on.jpg" alt="Héroe Rosa"></button>   
+            <section id="playerChooser1">
+                <button class="character" onclick="chooseFighter1('yellow1')"><img src="media/img/yellowhero-on.jpg" alt="Héroe Amarillo"></button>
+                <button class="character" onclick="chooseFighter1('blue1')"><img src="media/img/bluehero-on.jpg" alt="Héroe Azul"></button>
+                <button class="character" onclick="chooseFighter1('red1')"><img src="media/img/redhero-on.jpg" alt="Héroe Rojo"></button>
+                <button class="character" onclick="chooseFighter1('pink1')"><img src="media/img/pinkhero-on.jpg" alt="Héroe Rosa"></button>   
+            </section>
+            <section id="playerChooser2">
+                <button class="character" onclick="chooseFighter2('yellow2')"><img src="media/img/yellowhero-on.jpg" alt="Héroe Amarillo"></button>
+                <button class="character" onclick="chooseFighter2('blue2')"><img src="media/img/bluehero-on.jpg" alt="Héroe Azul"></button>
+                <button class="character" onclick="chooseFighter2('red2')"><img src="media/img/redhero-on.jpg" alt="Héroe Rojo"></button>
+                <button class="character" onclick="chooseFighter2('pink2')"><img src="media/img/pinkhero-on.jpg" alt="Héroe Rosa"></button>   
+            </section>
         </section>
-        <section id="playerFight">
-
-        </section>
-        <section id="playerWinner">
-
-        </section>
+            <section id="playerFight">
+                <div id="player1"></div>
+                <div id="player2"></div>
+            </section>
+        <section id="playerWinner"></section>
     </main>
 <script src="js/main.js"></script>    
 </body>
