@@ -1,29 +1,29 @@
-const yellow1 = '<button onclick="hitPlayer2"><img src="media/img/yellowhero-on.jpg" alt="Héroe Amarillo"></button>'
-const blue1 = '<button onclick="hitPlayer2"><img src="media/img/bluehero-on.jpg" alt="Héroe Azul"></button>'
-const red1 = '<button onclick="hitPlayer2"><img src="media/img/redhero-on.jpg" alt="Héroe Rojo"></button>'
-const pink1 = '<button onclick="hitPlayer2"><img src="media/img/pinkhero-on.jpg" alt="Héroe Rosa"></button>'
+const yellow1 = '<button onclick="hitPlayer(2)"><img src="media/img/yellowhero-on.jpg" alt="Héroe Amarillo"></button>'
+const blue1 = '<button onclick="hitPlayer(2)"><img src="media/img/bluehero-on.jpg" alt="Héroe Azul"></button>'
+const red1 = '<button onclick="hitPlayer(2)"><img src="media/img/redhero-on.jpg" alt="Héroe Rojo"></button>'
+const pink1 = '<button onclick="hitPlayer(2)"><img src="media/img/pinkhero-on.jpg" alt="Héroe Rosa"></button>'
 
-const yellow2 = '<button onclick="hitPlayer1"><img src="media/img/yellowhero-on.jpg" alt="Héroe Amarillo"></button>'
-const blue2 = '<button onclick="hitPlayer1"><img src="media/img/bluehero-on.jpg" alt="Héroe Azul"></button>'
-const red2 = '<button onclick="hitPlayer1"><img src="media/img/redhero-on.jpg" alt="Héroe Rojo"></button>'
-const pink2 = '<button onclick="hitPlayer1"><img src="media/img/pinkhero-on.jpg" alt="Héroe Rosa"></button>'
+const yellow2 = '<button onclick="hitPlayer(1)"><img src="media/img/yellowhero-on.jpg" alt="Héroe Amarillo"></button>'
+const blue2 = '<button onclick="hitPlayer(1)"><img src="media/img/bluehero-on.jpg" alt="Héroe Azul"></button>'
+const red2 = '<button onclick="hitPlayer(1)"><img src="media/img/redhero-on.jpg" alt="Héroe Rojo"></button>'
+const pink2 = '<button onclick="hitPlayer(1)"><img src="media/img/pinkhero-on.jpg" alt="Héroe Rosa"></button>'
 
 const chooseFighter1 = (player) => {
 
     console.log('parametro ', player)
 
     switch(player) {
-        case "yellow":
-            document.getElementById("player1").innerHTML = yellow
+        case "yellow1":
+            document.getElementById("player1").innerHTML = yellow1
             break
-        case "blue":
-            document.getElementById("player1").innerHTML = blue
+        case "blue1":
+            document.getElementById("player1").innerHTML = blue1
             break
-        case "red":
-            document.getElementById("player1").innerHTML = red
+        case "red1":
+            document.getElementById("player1").innerHTML = red1
             break
-        case "pink":
-            document.getElementById("player1").innerHTML = pink
+        case "pink1":
+            document.getElementById("player1").innerHTML = pink1
             break        
     }
 }
@@ -33,17 +33,17 @@ const chooseFighter2 = (player) => {
     console.log('parametro ', player)
 
     switch(player) {
-        case "yellow":
-            document.getElementById("player2").innerHTML = yellow
+        case "yellow2":
+            document.getElementById("player2").innerHTML = yellow2
             break
-        case "blue":
-            document.getElementById("player2").innerHTML = blue
+        case "blue2":
+            document.getElementById("player2").innerHTML = blue2
             break
-        case "red":
-            document.getElementById("player2").innerHTML = red
+        case "red2":
+            document.getElementById("player2").innerHTML = red2
             break
-        case "pink":
-            document.getElementById("player2").innerHTML = pink
+        case "pink2":
+            document.getElementById("player2").innerHTML = pink2
             break        
     }
 }
@@ -82,12 +82,27 @@ clickedButtons[5].addEventListener("click", incrementoClick)
 clickedButtons[6].addEventListener("click", incrementoClick)
 clickedButtons[7].addEventListener("click", incrementoClick)
 
-const playerLife1 = 10
-const playerLife2 = 10
+//
 
-let hitPlayer1 = () => playerLife1 -= 1
-let hitPlayer2 = () => playerLife2 -= 1
-
-if (playerLife1 == 0) {
-    console.log("Gana el jugador 2.")
+let playerLife1 = 10 
+let playerLife2 = 10
+let hitPlayer = (fighter) => {
+    switch(fighter) {
+        case 1:
+            console.log("golpea el jugador 2 al jugador 1")
+            playerLife1 -= 1
+            console.log(playerLife1)
+            if (playerLife1 == 0){
+                console.log("Fin del juego, gana el jugador 2.")
+            }
+        break
+        case 2:
+            console.log("golpea el jugador 1 al jugador 2")
+            playerLife2 -= 1
+            console.log(playerLife2)
+            if (playerLife2 == 0){
+                console.log("Fin del juego, gana el jugador 1.")
+            }
+        break
+    }
 }
